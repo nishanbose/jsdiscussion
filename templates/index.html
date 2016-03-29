@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript Discussion</title>
+
+		<script type="text/javascript">
+			function displayInformation() {
+				// Your code goes here.
+				// Do not change any other code in this file
+
+				/*
+				1. Change the h1 element to your name.
+				2. Update the three span elements using ONLY JavaScript
+				3. Change the background color and margin for the entire page.
+				4. If someone copies "University of Michigan" add the words "Go Blue" to the final div. Each instance should be on a separate line.
+				*/
+        console.log(document.getElementsByTagName('H1'));
+
+        document.getElementsByTagName('H1')[0].innerHTML = "Chuck";
+
+        document.getElementById('URL').innerHTML = document.URL;
+
+        console.log(document.getElementById('URL'));
+			}
+
+      function copyFunction() {
+        alert("Hello");
+      }
+
+		</script>
+		<style>
+			p {
+				background-color: #b3b3b3;
+				border: 3px solid #FFFFFF;
+				padding: 3%;
+				font-size: 1.1em;
+				line-height: 1.5;
+			}
+		</style>
+	</head>
+
+	<body onload="displayInformation();">
+		<h1>Your first name goes here</h1>
+
+    <h1>Your last name goes here</h1>
+
+		<ol>
+			<li>Apples</li>
+			<li>Bananas</li>
+			<li>Celery</li>
+			<li>Doughnuts</li>
+		</ol>
+
+		<h2>Use JavaScript to display the following information here:</h2>
+
+		<p>
+			The URL of this page is: <span id="URL"></span>
+			<br/> The number of list items for this page: <span id="items"></span>
+			<br/> The current date/time is: <span id="time"></span>
+			<br/>
+		</p>
+
+		<ul>
+			<li>Kent State</li>
+			<li>University of Pittsburgh</li>
+			<li>University of Ulster</li>
+			<li>California State University Long Beach</li>
+      <li>New University Here</li>
+			<li oncopy="copyFunction()">University of Michigan</li>
+		</ul>
+
+		<div id="cheer">
+
+		</div>
+	</body>
+</html>
